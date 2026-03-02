@@ -34,11 +34,6 @@ h1 {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
-.section-title {
-    font-size: 1.5rem;
-    font-weight: 600;
-    margin-top: 20px;
-}
 .prediction-card {
     background-color: #161b22;
     padding: 25px;
@@ -55,6 +50,41 @@ h1 {
 """, unsafe_allow_html=True)
 
 # ==============================
+# Sidebar Section
+# ==============================
+
+st.sidebar.title("🌿 Project Overview")
+
+st.sidebar.markdown("### 📌 What This Project Does")
+st.sidebar.write("""
+This AI system detects plant diseases from leaf images using
+a fine-tuned EfficientNet deep learning model trained on
+the PlantVillage dataset.
+""")
+
+st.sidebar.markdown("### 🔬 Model Details")
+st.sidebar.write("""
+- Architecture: EfficientNetB0  
+- Transfer Learning + Fine-Tuning  
+- Image Size: 224x224  
+- Classes: 38  
+- Test Accuracy: 98.04%  
+- Macro F1 Score: 0.98  
+""")
+
+st.sidebar.markdown("### 📖 How To Use")
+st.sidebar.write("""
+1. Upload a clear leaf image  
+2. Wait for AI analysis  
+3. View prediction & confidence  
+
+⚠ Best results with clear, well-lit images.
+""")
+
+st.sidebar.markdown("---")
+st.sidebar.markdown("Built with ❤️ using TensorFlow & Streamlit")
+
+# ==============================
 # Load Model
 # ==============================
 
@@ -65,65 +95,14 @@ def load_model():
 model = load_model()
 
 # ==============================
-# Header
+# Main Header
 # ==============================
 
-st.markdown("<h1>🌿 Plant Disease Detection AI System</h1>", unsafe_allow_html=True)
+st.markdown("<h1>🌱 Plant Disease Detection AI</h1>", unsafe_allow_html=True)
 st.markdown(
-    "<p style='text-align:center;'>Deep Learning powered plant disease classification using EfficientNet.</p>",
+    "<p style='text-align:center;'>Upload a leaf image to detect plant disease instantly.</p>",
     unsafe_allow_html=True
 )
-
-st.markdown("---")
-
-# ==============================
-# About Project Section
-# ==============================
-
-st.markdown("## 📌 What This Project Does")
-
-st.write("""
-This system uses a fine-tuned **EfficientNetB0 deep learning model**
-to classify plant leaf images into one of **38 disease categories**.
-
-It can detect:
-- Multiple crop types
-- Healthy vs diseased leaves
-- Early and advanced disease stages
-
-The model was trained on the **PlantVillage dataset**
-and optimized using transfer learning and fine-tuning.
-""")
-
-# ==============================
-# Model Details Section
-# ==============================
-
-with st.expander("🔬 Model Details"):
-    st.write("""
-    - Architecture: EfficientNetB0 (Transfer Learning)
-    - Training Strategy:
-        - Frozen backbone training
-        - Fine-tuning top layers
-    - Image Size: 224x224
-    - Classes: 38
-    - Test Accuracy: 98.04%
-    - Macro F1 Score: 0.98
-    """)
-
-# ==============================
-# How To Use Section
-# ==============================
-
-with st.expander("📖 How To Use"):
-    st.write("""
-    1. Upload a clear image of a plant leaf.
-    2. Ensure the leaf is visible and not blurry.
-    3. Wait for the AI system to analyze the image.
-    4. View predicted disease class and confidence score.
-    
-    ⚠️ Note: Best results are obtained with clear, well-lit images.
-    """)
 
 st.markdown("---")
 
@@ -166,12 +145,7 @@ if uploaded_file is not None:
         st.markdown("</div>", unsafe_allow_html=True)
 
 st.markdown("---")
-
-# ==============================
-# Footer
-# ==============================
-
 st.markdown(
-    "<div class='footer'>Built with TensorFlow • EfficientNet • Streamlit | Developed as an Industry-Level ML Project</div>",
+    "<div class='footer'>Industry-Level Deep Learning Project | 38-Class Multi-Disease Classification</div>",
     unsafe_allow_html=True
 )
