@@ -146,6 +146,6 @@ if uploaded_file is not None:
 
 st.markdown("---")
 st.markdown(
-    "<div class='footer'>Industry-Level Deep Learning Project | 38-Class Multi-Disease Classification</div>",
+    "<div class='footer'>Deep Learning Project | 38-Class Multi-Disease Classification</div>",
     unsafe_allow_html=True
 )
