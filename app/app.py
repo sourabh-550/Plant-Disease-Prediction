@@ -8,7 +8,7 @@ import os
 # ==============================
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
-MODEL_PATH = os.path.join(BASE_DIR, "..", "models", "plant_disease_efficientnet_finetuned.keras")
+MODEL_PATH = os.path.join(BASE_DIR, "..", "models", "plant_model_clean.keras")
 CLASS_NAMES_PATH = os.path.join(BASE_DIR, "..", "models", "class_names.json")
 
 st.set_page_config(

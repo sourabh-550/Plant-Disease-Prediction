@@ -9,11 +9,12 @@ IMG_SIZE = 224
 class PlantDiseaseModel:
     
     def __init__(self, model_path, class_names_path):
-        self.model = tf.keras.models.load_model(model_path)
-        
-        with open(class_names_path, "r") as f:
-            self.class_names = json.load(f)
-        print("Loaded Model Input Shape:", self.model.input_shape)
+     self.model = tf.keras.models.load_model(model_path, compile=False)
+    
+     with open(class_names_path, "r") as f:
+        self.class_names = json.load(f)
+    
+    print("Loaded Model Input Shape:", self.model.input_shape)
     
     def preprocess_image(self, img):
         # Force RGB (always 3 channels)
