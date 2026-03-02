@@ -1,1 +1,1 @@
-# Crop-Disease-Prediction
+# plant-Disease-Prediction
