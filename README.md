@@ -10,7 +10,7 @@
 
 **An end-to-end deep learning project for automated plant disease detection with 98.04% accuracy**
 
-[📊 Key Metrics](#-model-performance) • [🚀 Quick Start](#-quick-start) • [📁 Project Structure](#-project-structure) • [🔗 Contact](#-connect-with-me)
+[📊 Key Metrics](#-model-performance) • [🚀 Quick Start](#-quick-start) • [ Contact](#-connect-with-me)
 
 </div>
 
@@ -111,33 +111,6 @@ Phase 3: Fine-tuning           → 98.04% accuracy
    - Show confidence score
    - Visualize prediction confidence distribution
    - Provide disease information (optional)
-
----
-
-## 📁 Project Structure
-
-\\\
-Plant-Disease-Detection/
-│
-├── notebooks/                          # Jupyter notebooks for exploration & training
-│   ├── 01-data-eda-plant.ipynb        # Exploratory Data Analysis
-│   ├── 02-data-pipeline-and-baseline.ipynb  # Data pipeline & baseline model
-│   ├── 03-transfer-learning.ipynb     # Transfer learning implementation
-│   ├── 04-final-evaluation.ipynb      # Model evaluation & metrics
-│   └── 05-inference-pipeline.ipynb    # Inference pipeline testing
-│
-├── app/                                # Streamlit web application
-│   ├── app.py                         # Main application file
-│   └── utils.py                       # Helper functions & utilities
-│
-├── models/                             # Pre-trained model artifacts
-│   ├── plant_disease_efficientnet_finetuned.keras  # Final trained model
-│   └── class_names.json               # 38 disease class labels
-│
-├── requirements.txt                    # Python dependencies
-├── README.md                           # Project documentation
-└── .gitignore                          # Git ignore file
-\\\
 
 ---
 
@@ -254,29 +227,6 @@ Weighted F1 Score:      0.9804
 
 ---
 
-## ⚙️ Configuration & Customization
-
-### Modify Model Parameters
-Edit \pp/app.py\ to adjust:
-\\\python
-MODEL_PATH = "models/plant_disease_efficientnet_finetuned.keras"
-IMAGE_SIZE = (224, 224)
-CONFIDENCE_THRESHOLD = 0.5  # Adjust prediction threshold
-\\\
-
-### Add More Classes
-1. Retrain on expanded dataset
-2. Update \models/class_names.json\
-3. Reload model in app
-
-### Change Model Architecture
-Replace \EfficientNetB0\ with:
-- \EfficientNetB1\ - More parameters, higher accuracy
-- \EfficientNetB2\ through \B7\ - Progressive improvement
-- \ResNet50\ / \InceptionV3\ - Alternative architectures
-
----
-
 ## ⚠️ Limitations & Considerations
 
 ### Dataset Limitations
@@ -367,20 +317,16 @@ This project demonstrates professional skills attractive to recruiters:
 
 ## 📦 Dependencies
 
-**Core Libraries:**
-- \	ensorflow >= 2.15.0\ - Deep learning framework
-- \streamlit >= 1.28.0\ - Web application
-- \
-umpy >= 1.24.0\ - Numerical computing
-- \pandas >= 1.5.0\ - Data manipulation
-- \opencv-python >= 4.8.0\ - Image processing
+Core Python packages required:
+- `tensorflow == 2.20.0` - Deep learning framework
+- `streamlit` - Web application framework
+- `numpy` - Numerical computing
+- `pillow` - Image processing
 
-**Visualization:**
-- \matplotlib >= 3.7.0\
-- \seaborn >= 0.12.0\
-- \plotly >= 5.17.0\
-
-See \equirements.txt\ for complete list.
+All dependencies are listed in `requirements.txt`. Install them with:
+```bash
+pip install -r requirements.txt
+```
 
 ---
 
@@ -393,20 +339,6 @@ Contributions are welcome! To contribute:
 3. Commit changes (\git commit -m 'Add amazing feature'\)
 4. Push to branch (\git push origin feature/amazing-feature\)
 5. Open a Pull Request
-
----
-
-## 📄 License
-
-This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details.
-
-You are free to:
-- ✅ Use this project for personal & commercial purposes
-- ✅ Modify and distribute the code
-- ✅ Include in your portfolio
-
-Just remember to:
-- ⚠️ Include the license and copyright notice
 
 ---
 
@@ -434,3 +366,4 @@ Have questions or want to discuss this project?
 Made with ❤️ and 🧠 for the ML community
 
 </div>
+
